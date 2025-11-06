@@ -2,6 +2,16 @@ const taskInput = document.getElementById("taskInput");
 const addBtn = document.getElementById("addBtn");
 const taskList = document.getElementById("taskList");
 
+
+const completeBtn = document.createElement("button");
+completeBtn.textContent = "✔";
+li.appendChild(completeBtn);
+
+taskList.addEventListener("click", (e) => {
+  if (e.target.textContent === "✔") {
+    e.target.parentElement.classList.toggle("completed");
+  }
+});
 // Étudiant 1 : Ajout de tâche
 addBtn.addEventListener("click", () => {
 
@@ -20,11 +30,11 @@ taskList.addEventListener("click", (e) => {
     e.target.parentElement.remove();
   }
 });
-=======
     const taskText = taskInput.value.trim();
     if (taskText === "") return;
 
     const li = document.createElement("li");
     li.textContent = taskText;
 });
+
 
